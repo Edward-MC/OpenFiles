@@ -26,7 +26,7 @@ When submitting application information, please carefully verify all details, as
 
 The review time varies depending on the application type. You will be notified of the results via SMS or email. For any special cases, please contact the platform through the support ticket system.
 
-⚠️Note: During the review process, your application is not active, and you will not receive a valid App ID or App Secret. Therefore, you will not be able to use the API during this time.
+Note: During the review process, your application is not active, and you will not receive a valid App ID or App Secret. Therefore, you will not be able to use the API during this time.
 
 
 Step 3: Test the Application
@@ -48,7 +48,7 @@ During the application testing phase, focus on the following:
 
 3、Call the interfaces to validate business logic.
 
-⚠️Reminder:
+️Reminder:
 
 The platform will provide test environment stores to assist you with testing. Once the application review is approved, you can see the store key information in the console. If you need account information to log into the store backend, please contact the email openapi@shein.com or submit a ticket to request it.
 
@@ -97,7 +97,7 @@ However, during application testing, since you do not have access to a seller’
 
 You can use the authorization testing tool provided by the platform, which simulates an application and store to help you obtain the tempToken. With this, you can test the process of exchanging the tempToken for an openKeyId.
 
-⚠️Note:
+️Note:
 
 The test environment authorization link uses the following domain:  https://openapi-test01.sheincorp.cn/#/empower
 When calling the /open-api/auth/get-by-token interface to generate a signature, use the APP_ID and APP_secretKey of your application for the openKeyId and secretKey.
@@ -114,7 +114,7 @@ During the application testing phase, use the test stores provided by the platfo
 
 For your application type, the platform provides corresponding store information. You can use the store’s openKeyId and secretKey to make API calls. If you need access to the seller backend of the test store, please submit a support ticket to contact the platform.
 
-⚠️Note: For the test environment, use the following domain to make API calls: https://openapi-test01.sheincorp.cn
+Note: For the test environment, use the following domain to make API calls: https://openapi-test01.sheincorp.cn
 
 
 Step 4: Preparation for Launch
