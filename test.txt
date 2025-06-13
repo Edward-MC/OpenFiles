@@ -22,6 +22,8 @@ Developers can only create applications after their qualification has been appro
 
 When submitting application information, please carefully verify all details, as the application name, icon, and description will be visible to sellers. Once the application is submitted for review, changes cannot be made independently. To make any modifications, you will need to contact the platform.
 
+sellers through your own channels and provide them with the application authorization link. Sellers can log in to their SHEIN seller account through the link and grant authorization. After the seller authorizes, the application can access the seller’s business data via the API.
+
 3、Complete Application Review
 
 The review time varies depending on the application type. You will be notified of the results via SMS or email. For any special cases, please contact the platform through the support ticket system.
@@ -49,7 +51,6 @@ During the application testing phase, focus on the following:
 3、Call the interfaces to validate business logic.
 
 ️Reminder:
-
 The platform will provide test environment stores to assist you with testing. Once the application review is approved, you can see the store key information in the console. If you need account information to log into the store backend, please contact the email openapi@shein.com or submit a ticket to request it.
 
 
@@ -85,47 +86,6 @@ Subscribing to Webhooks involves two steps:
 
 Application Testing Key Points
 
-1、Test the Authorization Process
-
-Your application needs to obtain authorization from the seller to access their data, making authorization a crucial step. You can find field explanations and code examples for the authorization process here.
-
-There are two key points in the authorization process:
-
-Construct the authorization link to obtain the tempToken
-Use the tempToken to obtain the openKeyId.
-However, during application testing, since you do not have access to a seller’s store, you cannot fully test the process.
-
-You can use the authorization testing tool provided by the platform, which simulates an application and store to help you obtain the tempToken. With this, you can test the process of exchanging the tempToken for an openKeyId.
-
-️Note:
-
-The test environment authorization link uses the following domain:  https://openapi-test01.sheincorp.cn/#/empower
-When calling the /open-api/auth/get-by-token interface to generate a signature, use the APP_ID and APP_secretKey of your application for the openKeyId and secretKey.
-
-2、Verify the Signature Rules
-
-All API calls require a signed request parameter, and incorrect signatures will result in failed calls. Therefore, it is essential to verify that the signature rules are correct.
-
-You can use the signature calculation tool on the signature rules page to verify the correctness of the signature.Click here to view the detailed explanation of the signature rules.
-
-3、Call Interfaces to Verify Business Logic
-
-During the application testing phase, use the test stores provided by the platform to verify the business logic of your API calls.
-
-For your application type, the platform provides corresponding store information. You can use the store’s openKeyId and secretKey to make API calls. If you need access to the seller backend of the test store, please submit a support ticket to contact the platform.
-
-Note: For the test environment, use the following domain to make API calls: https://openapi-test01.sheincorp.cn
-
-
-Step 4: Preparation for Launch
-Before your application is officially made available to sellers, please ensure the following actions are completed:
-
-1、Your IP address has been added to the whitelist
-
-2、The Webhook callback URL for the production environment has been approved.
-
-3、The API call domain has been switched to the production domain.
-
 
 1、IP Address Added to the Whitelist
 
@@ -144,4 +104,4 @@ https://openapi.sheincorp.com	https://openapi.sheincorp.cn
 
 
 Step 5: Reach Out to Sellers for Application Authorization
-Once your application has completed the four steps above, you can reach out to sellers through your own channels and provide them with the application authorization link. Sellers can log in to their SHEIN seller account through the link and grant authorization. After the seller authorizes, the application can access the seller’s business data via the API.
+Once your application has completed the four steps above, you can reach out to
